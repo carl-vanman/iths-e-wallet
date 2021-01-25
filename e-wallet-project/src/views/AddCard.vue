@@ -40,7 +40,7 @@ export default {
           vendor: this.card.vendor,
           number: this.card.number,
           validMonth: this.card.validMonth,
-          validDay: this.card.validDay
+          validDay: this.card.validDay,
       }
     },
     numberGap() {

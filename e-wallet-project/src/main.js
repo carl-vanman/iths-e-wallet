@@ -12,15 +12,37 @@ new Vue({
           id: "432984728397",
           holder: "The name",
           vendor: "bitcoin",
-          number: "XXXXYYYYZZZZFFFF",
+          number: "XXXX23323ZZFFFF8",
           validMonth: "12",
-          validDay: "5"
+          validDay: "5",
+          active: false
+        },
+        {
+          id: "432984728392",
+          holder: "The name",
+          vendor: "bitcoin",
+          number: "4345435FFFF",
+          validMonth: "12",
+          validDay: "5",
+          active: true
+        },
+        {
+          id: "432984728393",
+          holder: "The name",
+          vendor: "bitcoin",
+          number: "Carl Vänman",
+          validMonth: "12",
+          validDay: "5",
+          active: false
         }
-      ]
+      ],
   }},
   methods: {
     setAddCard(data) {
       this.cards.push(data)
+    },
+    setCardToActive() {
+
     }
   },
   router,
