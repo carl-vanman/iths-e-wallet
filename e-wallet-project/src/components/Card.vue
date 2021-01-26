@@ -1,6 +1,5 @@
 <template>
   <div>
-          <!-- <p v-if="card.active"> {{card.holder}}{{cardNumber}}</p> -->
         <p v-if="card.number"> {{ cardNumber }} </p>
   </div>
 </template>

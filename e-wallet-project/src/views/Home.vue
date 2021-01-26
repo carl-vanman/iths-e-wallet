@@ -34,7 +34,7 @@ export default {
     },
     activeCard() {
       return this.cards.find(card => card.active === true); 
-    }
+    },
   }
 }
 </script>

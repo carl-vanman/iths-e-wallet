@@ -41,11 +41,9 @@ export default {
           number: this.card.number,
           validMonth: this.card.validMonth,
           validDay: this.card.validDay,
+          active: false
       }
     },
-    numberGap() {
-      return 3
-    }
   },
   methods: {
     addCard() {

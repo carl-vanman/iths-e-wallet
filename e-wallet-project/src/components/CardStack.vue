@@ -1,6 +1,10 @@
 <template>
   <div>
-      <Card v-bind:card="card" v-for="card in cards" :key="card.id" />
+        <ul>
+            <li v-for="card in cards" :key="card.id" @click="message(card.id)">
+                <Card v-bind:card="card" />
+            </li>
+        </ul>
   </div>
 </template>
 
@@ -12,10 +16,21 @@ export default {
     },
     props: {
         cards: Array
+    },
+    methods: {
+        message(clickedCardId) {
+            this.$root.setCardToActive(clickedCardId)
+        }
     }
 }
 </script>
 
-<style>
-
+<style scoped>
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    ul, li {
+        margin:0px;
+    }
 </style>

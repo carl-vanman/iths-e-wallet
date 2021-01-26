@@ -41,9 +41,12 @@ new Vue({
     setAddCard(data) {
       this.cards.push(data)
     },
-    setCardToActive() {
-
-    }
+    setCardToActive(id) {
+      let hejsan = this.cards.find(card => card.active === true);
+      let hejsan2 = this.cards.find(card => card.id === id);
+      hejsan.active = false
+      hejsan2.active = true
+    },
   },
   router,
   render: h => h(App)
