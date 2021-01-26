@@ -29,6 +29,11 @@ export default {
     ul {
         list-style: none;
         padding: 0;
+        
+        /* To stack Cards */
+        margin: 2rem 0 12rem;
+        display: grid;
+        grid-auto-rows: 4rem;
     }
     ul, li {
         margin:0px;

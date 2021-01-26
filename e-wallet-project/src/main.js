@@ -12,7 +12,7 @@ new Vue({
           id: "432984728397",
           holder: "The name",
           vendor: "bitcoin",
-          number: "XXXX23323ZZFFFF8",
+          number: "2222233233388768",
           validMonth: "12",
           validDay: "5",
           active: false

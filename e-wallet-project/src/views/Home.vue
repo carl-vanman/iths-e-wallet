@@ -1,7 +1,4 @@
 /* active status måste läggas till på kortet som skapas  */
-
-
-
 <template>
   <div class="home">
     <Top />

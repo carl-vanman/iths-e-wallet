@@ -1,12 +1,12 @@
 /* v-if="window.location.href === 'http://localhost:8080/AddCard' */
 
 <template>
-  <div class="card">
-    <div>
-      <h1> {{ title }} </h1>
+    <section class="top">
+      <header>
+        <h1> {{ title }} </h1>
+      </header>
       <p> {{ subTitle }} </p>
-    </div>
-  </div>
+    </section>
 </template>
 
 <script>
@@ -46,5 +46,22 @@ export default {
   },
 }
 </script>
-<style>
+<style scoped>
+  section {
+    text-align: center;
+  }
+
+  h1 {
+    font-family: 'Source Sans Pro';
+    font-size: 32px;
+  }
+  
+  p {
+    font-size: 0.8rem;
+    color: rgba(0,0,0,.4);
+    font-weight: 600;
+  }
+  h1, p {
+    text-transform: uppercase;
+  }
 </style>
