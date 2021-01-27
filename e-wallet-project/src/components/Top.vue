@@ -54,12 +54,14 @@ export default {
   h1 {
     font-family: 'Source Sans Pro';
     font-size: 32px;
+    margin: 24px 0;
   }
   
   p {
     font-size: 0.8rem;
     color: rgba(0,0,0,.4);
     font-weight: 600;
+    margin: 4px 0;
   }
   h1, p {
     text-transform: uppercase;

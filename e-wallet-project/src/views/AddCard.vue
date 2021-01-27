@@ -1,7 +1,7 @@
 <template>
   <div>
       <Top />
-      <Card v-bind:card="card"/>
+      <Card v-bind:card="card" />
       <CardForm 
         v-bind:card="card"
         v-on:hlick="addCard()"
@@ -29,7 +29,7 @@ export default {
         vendor: "",
         number: "",
         validMonth: "",
-        validDay: ""
+        validYear: "",
       }
   }},
   computed: {
@@ -40,7 +40,7 @@ export default {
           vendor: this.card.vendor,
           number: this.card.number,
           validMonth: this.card.validMonth,
-          validDay: this.card.validDay,
+          validYear: this.card.validYear,
           active: false
       }
     },
@@ -48,9 +48,19 @@ export default {
   methods: {
     addCard() {
       this.$root.setAddCard(this.cardToSend)
-    }
-  }
+    },
+    /* choosenVendor(vendor) {
+      if (this.card.vendor === vendor) {
+        return {
+          cssClass:"bitcoin",
+          imgClip:"@/assets/chip-dark.svg",
+          imgVendor:"@/assets/vendor-bitcoin.svg"
+        }
+      }
+    }, */
+  },
 }
 </script>
+
 <style>
 </style>

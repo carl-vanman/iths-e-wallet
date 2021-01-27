@@ -10,30 +10,39 @@ new Vue({
       cards: [
         {
           id: "432984728397",
-          holder: "The name",
-          vendor: "bitcoin",
+          holder: "Nils Holmenberg",
+          vendor: "blockchain",
           number: "2222233233388768",
           validMonth: "12",
-          validDay: "5",
+          validYear: "05",
           active: false
         },
         {
           id: "432984728392",
-          holder: "The name",
+          holder: "Petter Svenson",
           vendor: "bitcoin",
-          number: "4345435FFFF",
+          number: "1232434565475487",
           validMonth: "12",
-          validDay: "5",
-          active: true
+          validYear: "05",
+          active: false
         },
         {
           id: "432984728393",
-          holder: "The name",
-          vendor: "bitcoin",
-          number: "Carl Vänman",
+          holder: "Eric Ericsson",
+          vendor: "ninja",
+          number: "5846096837542854",
           validMonth: "12",
-          validDay: "5",
+          validYear: "05",
           active: false
+        },
+        {
+          id: "432984728394",
+          holder: "Rickard Wallin",
+          vendor: "evil",
+          number: "3454675864356785",
+          validMonth: "12",
+          validYear: "05",
+          active: true
         }
       ],
   }},

@@ -1,11 +1,19 @@
 <template>
-  <div>
-        <ul>
-            <li v-for="card in cards" :key="card.id" @click="message(card.id)">
-                <Card v-bind:card="card" />
-            </li>
-        </ul>
-  </div>
+    <div>
+        <section>
+            <ul>
+                <li class="stack" v-for="card in cards" :key="card.id" @click="message(card.id)">
+                    <Card v-bind:card="card" />
+                </li>
+            </ul>
+        </section>
+        <button 
+            class="cta"
+            @click.prevent="toCardForm"
+        >
+        Add Card
+        </button>
+    </div>
 </template>
 
 <script>
@@ -20,6 +28,9 @@ export default {
     methods: {
         message(clickedCardId) {
             this.$root.setCardToActive(clickedCardId)
+        },
+        toCardForm() {
+            this.$router.push('AddCard')
         }
     }
 }
@@ -29,13 +40,18 @@ export default {
     ul {
         list-style: none;
         padding: 0;
-        
-        /* To stack Cards */
-        margin: 2rem 0 12rem;
-        display: grid;
-        grid-auto-rows: 4rem;
     }
     ul, li {
         margin:0px;
     }
+    .stack {
+        margin-top: -10rem;
+        position: relative;
+        width: 100%;
+    }
+
+    li:first-child {
+        margin-top: -10%;
+    }
+
 </style>
