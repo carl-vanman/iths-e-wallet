@@ -69,10 +69,9 @@ header {
     color: #fff;
 }
 
-.chip {align-self: flex-end;}
-
-.card-logo {
-    }
+.chip {
+    align-self: flex-end;
+}
 
 .info {
     display: flex;
