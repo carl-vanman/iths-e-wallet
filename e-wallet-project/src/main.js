@@ -52,10 +52,10 @@ new Vue({
       this.cards.push(data)
     },
     setCardToActive(id) {
-      let hejsan = this.cards.find(card => card.active === true);
-      let hejsan2 = this.cards.find(card => card.id === id);
-      hejsan.active = false
-      hejsan2.active = true
+      let currentActive = this.cards.find(card => card.active === true);
+      let toBeActive = this.cards.find(card => card.id === id);
+      currentActive.active = false
+      toBeActive.active = true
     },
     setRemoveCard() {
       if(this.cards.length === 1) {

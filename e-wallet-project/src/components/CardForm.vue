@@ -2,12 +2,9 @@
 <section>
     <form class="card-form">
         <div class="card-number col-2">
-            <label 
-                for="card-number"
-            >
+            <label for="card-number">
                 Card Number
             </label>
-            <br>
             <input 
                 type="text" 
                 name="card-number" 
@@ -17,9 +14,7 @@
             >
         </div>
         <div class="card-holder col-2">
-            <label 
-                for="card-holder"
-            >
+            <label for="card-holder">
                 Card holder
             </label>
             <input 
@@ -78,7 +73,7 @@
             </select>
         </div>
     </form>
-    <button class="cta" @click.prevent="hlick">Add New Card</button>
+    <button class="cta" @click.prevent="addCard">Add New Card</button>
 </section>
 </template>
 
@@ -88,12 +83,11 @@ export default {
         card: Object
     },
     methods: {
-        hlick() {
-            this.$emit('hlick')
+        addCard() {
+            this.$emit('addCard')
             this.$router.push('/')
         }
-    }
-
+    },
 }
 </script>
 

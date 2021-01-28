@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="card-stack">
         <section>
             <ul>
                 <li class="stack" v-for="card in cards" :key="card.id" @click="message(card.id)">
@@ -42,13 +42,14 @@ export default {
         list-style: none;
         padding: 0;
     }
-    ul, li {
+    /* ul, li {
         margin:0px;
-    }
+    } */
     .stack {
-        margin-top: -10rem;
         position: relative;
         width: 100%;
+        margin-top: -10rem;
+        cursor: pointer;
     }
 
     li:first-child {

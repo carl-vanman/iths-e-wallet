@@ -1,11 +1,15 @@
 <template>
   <div>
+    <header>
       <Top />
+    </header>
+    <main>
       <Card v-bind:card="card" />
       <CardForm 
         v-bind:card="card"
-        v-on:hlick="addCard()"
+        v-on:addCard="pushCard()"
         />
+    </main>
   </div>
 </template>
 
@@ -33,7 +37,7 @@ export default {
       }
   }},
   computed: {
-    cardToSend() {
+    newCard() {
       return {
           id: Date.now(),
           holder: this.card.holder,
@@ -46,8 +50,8 @@ export default {
     },
   },
   methods: {
-    addCard() {
-      this.$root.setAddCard(this.cardToSend)
+    pushCard() {
+      this.$root.setAddCard(this.newCard)
     },
   },
 }

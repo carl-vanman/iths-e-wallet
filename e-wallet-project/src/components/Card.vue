@@ -1,8 +1,8 @@
 <template>
     <article class="card" v-bind:class="card.vendor">
         <header class="col-2 row-2">
-                <img v-if="card.vendor === 'bitcoin'" src="@/assets/chip-dark.svg" alt="">
-                <img v-else src="@/assets/chip-light.svg" alt="">
+                <img class="chip" v-if="card.vendor === 'bitcoin'" src="@/assets/chip-dark.svg" alt="">
+                <img class="chip" v-else src="@/assets/chip-light.svg" alt="">
                 <div>
                     <img v-if="card.vendor === 'bitcoin'" src="@/assets/vendor-bitcoin.svg" alt="">
                     <img v-else-if="card.vendor === 'blockchain'" src="@/assets/vendor-blockchain.svg" alt="">
@@ -65,7 +65,7 @@ header {
 
 .number {
     font-size: 1.6rem;
-    margin: 8px 0 0 0;
+    margin: 8px 0 0;
     color: #fff;
 }
 

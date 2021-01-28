@@ -1,18 +1,22 @@
 /* active status måste läggas till på kortet som skapas  */
 <template>
   <div class="home">
-    <Top />
-    <div 
-        @mouseover="hovering" 
-        @mouseout="hovering"
-        :class="{ hover: isHovering }"
-        @click="removeCard()"
-        >
-      <Card  
-        v-bind:card="activeCard"
-      />
-    </div>
-    <CardStack v-bind:cards="cards" />
+    <header>
+      <Top />
+    </header>
+    <main>
+      <div 
+          @mouseover="hovering" 
+          @mouseout="hovering"
+          :class="{ delBtn: isHovering }"
+          @click="removeCard()"
+          >
+        <Card  
+          v-bind:card="activeCard"
+        />
+      </div>
+      <CardStack v-bind:cards="cards" />
+    </main>
   </div>
 </template>
 
@@ -50,12 +54,12 @@ export default {
 }
 </script>
 <style scoped>
-
-  .hover {
+/* Delete btn */
+  .delBtn {
     position: relative;
   }
 
-  .hover::before {
+  .delBtn::before {
     content: '';
     position: absolute;
     background-color: #000;
@@ -68,15 +72,14 @@ export default {
     cursor: pointer;
   }
 
-  .hover::after {
+  .delBtn::after {
     content: 'x';
     position: absolute;
     font-size: 24px;
-    right: -2px;
-    top: -2px;
+    right: -1.5px;
+    top: -1.5px;
     color: #fff;
     line-height: 50%;
     cursor: pointer;
   }
-
 </style>
