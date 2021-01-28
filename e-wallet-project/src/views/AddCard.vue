@@ -49,15 +49,6 @@ export default {
     addCard() {
       this.$root.setAddCard(this.cardToSend)
     },
-    /* choosenVendor(vendor) {
-      if (this.card.vendor === vendor) {
-        return {
-          cssClass:"bitcoin",
-          imgClip:"@/assets/chip-dark.svg",
-          imgVendor:"@/assets/vendor-bitcoin.svg"
-        }
-      }
-    }, */
   },
 }
 </script>

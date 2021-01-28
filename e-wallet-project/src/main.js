@@ -46,6 +46,7 @@ new Vue({
         }
       ],
   }},
+
   methods: {
     setAddCard(data) {
       this.cards.push(data)
@@ -55,6 +56,15 @@ new Vue({
       let hejsan2 = this.cards.find(card => card.id === id);
       hejsan.active = false
       hejsan2.active = true
+    },
+    setRemoveCard() {
+      if(this.cards.length === 1) {
+        alert("Sorry, but you need to have at least one Card")
+      } else {
+      let pos = this.cards.map(function(e) { return e.active; }).indexOf(true);
+      this.cards.splice(pos, 1)
+      this.cards[0].active = true
+      }
     },
   },
   router,

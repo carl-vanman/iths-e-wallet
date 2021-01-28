@@ -19,6 +19,7 @@
 <script>
 import Card from './Card.vue'
 export default {
+    
     components: { 
         Card
     },
@@ -31,7 +32,7 @@ export default {
         },
         toCardForm() {
             this.$router.push('AddCard')
-        }
+        },
     }
 }
 </script>
@@ -51,7 +52,6 @@ export default {
     }
 
     li:first-child {
-        margin-top: -10%;
+        margin-top: 32px;
     }
-
 </style>
