@@ -8,9 +8,11 @@
       <div 
           @mouseover="hovering" 
           @mouseout="hovering"
-          :class="{ delBtn: isHovering }"
-          @click="removeCard()"
           >
+          <div
+          :class="{ delBtn: isHovering }"
+          @click="removeCard()">
+          </div>
         <Card  
           v-bind:card="activeCard"
         />
@@ -76,7 +78,7 @@ export default {
     content: 'x';
     position: absolute;
     font-size: 24px;
-    right: -1.5px;
+    right: -1.75px;
     top: -1.5px;
     color: #fff;
     line-height: 50%;
